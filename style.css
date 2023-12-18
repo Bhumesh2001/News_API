@@ -4,18 +4,35 @@
 }
 li{
     list-style: none;
-    padding: 2%
+    padding: 2%;
 }
 a{
     text-decoration: none;
     margin: 1%;
     color: black;
+    width: 1%;
 }
 #heading{
-    margin-left: 2.6%;
+    margin-left: 3%;
 }
 .newsOption{
     border: 2px solid black;
-    padding: 4px 3px 3px 4px;
+    padding: 8px;
     border-radius: 20px;
+}
+.flex-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-box{
+    height: 450px;
+    width: 500px;
+    border: 2px solid red;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
 }

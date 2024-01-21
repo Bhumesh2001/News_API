@@ -73,26 +73,26 @@ h4 {
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
-    .main{
+    .main {
         height: 74vh;
     }
-    .flex-box{
+
+    .flex-box {
         height: 34vh;
         width: 36vh;
     }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
-    .main{
+    .main {
         height: 73vh;
     }
-    .flex-box{
+
+    .flex-box {
         height: 38vh;
         width: 42vh;
     }
 }
-
-@media screen and (min-width: 376px) and (max-width: 425px) {}
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
     #contact {
@@ -106,8 +106,13 @@ h4 {
     .heading {
         margin-left: 5%;
     }
-    .main{
+
+    .main {
         height: 74vh;
+    }
+
+    .flex-box {
+        width: 60vh;
     }
 }
 

@@ -22,17 +22,11 @@
     border-radius: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    margin: 1%;
-}
-
 .newsOption {
     display: flex;
-    margin-left: 3.5%;
     margin-top: 1%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 h4 {
@@ -43,17 +37,9 @@ h4 {
     cursor: pointer;
 }
 
-.home {
-    margin-left: 4.5%;
-}
-
-#contact {
-    margin-left: 67%;
-}
-
 .heading {
-    margin-left: 4.5%;
     margin-top: 2%;
+    text-align: center;
 }
 
 .flex-container {
@@ -74,7 +60,7 @@ h4 {
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .main {
-        height: 74vh;
+        height: 78vh;
     }
 
     .flex-box {
@@ -83,9 +69,9 @@ h4 {
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
     .main {
-        height: 73vh;
+        height: 77vh;
     }
 
     .flex-box {
@@ -94,28 +80,22 @@ h4 {
     }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    #contact {
-        margin-left: 35%;
-    }
-
-    .home {
-        margin-left: 5%;
-    }
-
+@media screen and (min-width: 425px) and (max-width: 768px) {
     .heading {
         margin-left: 5%;
     }
 
     .main {
-        height: 74vh;
+        height: 76vh;
     }
 
     .flex-box {
-        width: 60vh;
+        width: 47vh;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
-
-@media screen and (min-width: 1025px) and (max-width: 1440px) {}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main {
+        height: 74vh;
+    }
+}

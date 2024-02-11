@@ -3,16 +3,17 @@
     padding: 0;
 }
 
-body{
+body {
     background-color: #1b1b1e;
 }
 
 .main {
-    border: 2px solid red;
-    height: 70vh;
+    /* border: 2px solid red; */
+    height: 75vh;
     border-radius: 0px 0px 20px 20px;
     overflow: auto;
     margin: 0% 4% 0% 4%;
+    background-color: #373f51;
 }
 
 .main::-webkit-scrollbar {
@@ -22,20 +23,20 @@ body{
 .nav {
     margin: 2% 4% 0% 4%;
     list-style: none;
-    border: 2px solid red;
-    border-radius: 20px 20px  0px 0px;
+    /* border: 2px solid red; */
+    border-radius: 20px 20px 0px 0px;
     background-color: #373f51;
 }
 
 .newsOption {
     display: flex;
-    margin: 1%;
+    margin-top: 1%;
     flex-wrap: wrap;
     justify-content: center;
     color: white;
 }
 
-h4:hover{
+h4:hover {
     background-color: #58a4b0;
     color: black;
     border-color: black;
@@ -52,7 +53,12 @@ h4 {
 .heading {
     margin-top: 2%;
     text-align: center;
-    color: white;
+    color: whitesmoke;
+    padding-top: 1%;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #ffb703, #ff006e);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .flex-container {
@@ -65,22 +71,24 @@ h4 {
 
 .flex-box {
     margin: 2%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     border-radius: 15px;
     width: 50vh;
     height: 54vh;
     background-color: #A9BCD0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 h3 {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     padding: 2%;
     border-radius: 2px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
-    border: 2px solid rebeccapurple;
+    /* border: 2px solid rebeccapurple; */
     margin-top: 3%;
     text-align: center;
     padding: 3%;
@@ -94,6 +102,55 @@ img {
     object-fit: cover;
 }
 
+.loader {
+    width: 3%;
+    aspect-ratio: 1;
+
+    --c1: linear-gradient(to bottom, #f45b5b, #f28787);
+    --c2: linear-gradient(to bottom, #2196f3, #0d6efd);
+    --c3: linear-gradient(to bottom, #9fa8da, #8f98d1);
+
+    --r1: radial-gradient(farthest-side at bottom, #0000 93%, transparent);
+    --r2: radial-gradient(farthest-side at top, #0000 93%, transparent);
+
+    background:
+        var(--c1), var(--r1), var(--r2),
+        var(--c2), var(--r1), var(--r2),
+        var(--c3), var(--r1), var(--r2);
+
+    background-repeat: no-repeat;
+    animation: l2 1s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes l2 {
+
+    0%,
+    25% {
+        background-size: 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(50% - 2px), 0 calc(50% + 2px), 50% 50%, 50% calc(50% - 2px), 50% calc(50% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    50% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(50% - 2px), 50% calc(50% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    75% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(0% - 2px), 50% calc(100% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    95%,
+    100% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(0% - 2px), 50% calc(100% + 2px), 100% 50%, 100% calc(0% - 2px), 100% calc(100% + 2px);
+    }
+}
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .main {

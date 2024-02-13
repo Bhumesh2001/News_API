@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                             flex_box_div.className = 'flex-box';
                             imgTag.src = article.urlToImage;
+                            imgTag.draggable = false;
                             h3Tag.textContent = article.title;
                             ptag.textContent = article.description;
 

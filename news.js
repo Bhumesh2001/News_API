@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     let searchToNews = 'Latest News';
-    const apiKey = '0cc8a8c85e3444b1bef66fe6fc6d82e1';
+    const apiKey = '';
     const flexContainer = document.querySelector('.flex-container');
     const heading = document.querySelector('.heading');
+    const iconId = document.getElementById('search-icon');
+    const input_search = document.querySelector('.input-search');
+
+    let previousSearchValue = '';
+    iconId.addEventListener('click', () => {
+        const searchValue = input_search.value.trim();
+        if (searchValue !== '' && searchValue !== previousSearchValue) {
+            previousSearchValue = searchValue;
+            searchToNews = searchValue;
+            fetchAndDisplayNews();
+        };
+    });
     const showLoader = () => {
         const loader = document.createElement('div');
         loader.className = 'loader';
@@ -25,21 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     hideLoader();
                     data.articles.forEach(article => {
-                        if (article.title && article.description && article.urlToImage) {
+                        if (article.title && article.description && article.urlToImage && article.url) {
                             const flex_box_div = document.createElement('div');
+                            const readDiv = document.createElement('div');
                             const imgTag = document.createElement('img');
                             const h3Tag = document.createElement('h3');
                             const ptag = document.createElement('p');
+                            const aTag = document.createElement('a');
 
                             flex_box_div.className = 'flex-box';
                             imgTag.src = article.urlToImage;
                             imgTag.draggable = false;
                             h3Tag.textContent = article.title;
                             ptag.textContent = article.description;
+                            aTag.href = article.url;
+                            aTag.draggable = false;
+                            aTag.target = "_blank";
+                            aTag.textContent = 'Read More'
+                            readDiv.className = "read";
+                            aTag.className = 'read-more-btn';
 
                             flex_box_div.appendChild(imgTag);
                             flex_box_div.appendChild(h3Tag);
                             flex_box_div.appendChild(ptag);
+                            readDiv.appendChild(aTag);
+                            flex_box_div.appendChild(readDiv);
                             flexContainer.appendChild(flex_box_div);
                         };
                     });

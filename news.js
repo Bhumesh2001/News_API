@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     let searchToNews = 'Latest News';
-    const apiKey = '';
+    const apiKey = '0cc8a8c85e3444b1bef66fe6fc6d82e1';
     const flexContainer = document.querySelector('.flex-container');
     const heading = document.querySelector('.heading');
-    const iconId = document.getElementById('search-icon');
-    const input_search = document.querySelector('.input-search');
+    const iconId = document.querySelector('.btn-icon-content');
+    const input_search = document.querySelector('#input-search');
 
     let previousSearchValue = '';
     iconId.addEventListener('click', () => {

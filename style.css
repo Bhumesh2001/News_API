@@ -8,7 +8,7 @@ body {
 }
 
 .main {
-    height: 69vh;
+    height: 68.5vh;
     border-radius: 0px 0px 20px 20px;
     overflow: auto;
     margin: 0% 4% 0% 4%;
@@ -329,9 +329,36 @@ img {
     right: 15px;
 }
 
+
+.container {
+    text-align: center;
+    margin: 15%;
+    width: 35%;
+}
+
+.status-code {
+    font-size: 3em;
+    margin: 0;
+    color: #e5e5e5;
+}
+
+.content {
+    font-size: 1.5em;
+    color: #e5e5e5; 
+}
+
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .main {
-        height: 74.5vh;
+        height: 73vh;
+    }
+
+    .search {
+        margin: 2%;
+    }
+
+    .loader {
+        width: 12%;
+        height: 5%;
     }
 
     .flex-container {
@@ -353,14 +380,28 @@ img {
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
     }
-    .search-box{
+
+    .search-box {
         width: 50%;
+    }
+
+    .read-more-btn {
+        padding: 7px 10px;
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 375px) and (max-width: 424px) {
     .main {
-        height: 73.5vh;
+        height: 71vh;
+    }
+
+    .loader {
+        width: 12%;
+    }
+
+    .search {
+        margin: 3%;
     }
 
     img {
@@ -372,9 +413,11 @@ img {
         flex-direction: column;
         gap: 18px;
     }
-    .search-box{
+
+    .search-box {
         width: 55%;
     }
+
     .flex-box {
         height: 56vh;
         width: 45vh;
@@ -394,9 +437,18 @@ img {
 
 @media screen and (min-width: 425px) and (max-width: 767px) {
     .main {
-        height: 72.5vh;
+        height: 71vh;
     }
-    .search-box{
+
+    .search {
+        margin: 2%;
+    }
+
+    .loader {
+        width: 11%;
+    }
+
+    .search-box {
         width: 60%;
     }
 
@@ -431,11 +483,16 @@ img {
         height: 74.5vh;
     }
 
+    .loader {
+        width: 6%;
+    }
+
     .read-more-btn {
         padding: 7px 12px;
         font-size: 14px;
     }
-    .search-box{
+
+    .search-box {
         width: 50%;
     }
 
@@ -457,5 +514,13 @@ img {
 @media screen and (width: 1024px) {
     .main {
         height: 71.5vh;
+    }
+
+    .loader {
+        width: 5%;
+    }
+
+    .search-box {
+        width: 36%;
     }
 }

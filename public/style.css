@@ -344,7 +344,7 @@ img {
 
 .content {
     font-size: 1.5em;
-    color: #e5e5e5; 
+    color: #e5e5e5;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -478,7 +478,7 @@ img {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .main {
         height: 74.5vh;
     }
@@ -511,7 +511,7 @@ img {
     }
 }
 
-@media screen and (width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1246px) {
     .main {
         height: 71.5vh;
     }
@@ -522,5 +522,9 @@ img {
 
     .search-box {
         width: 36%;
+    }
+
+    .flex-box {
+        height: 57vh;
     }
 }
